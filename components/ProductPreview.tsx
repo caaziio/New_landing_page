@@ -1,153 +1,67 @@
-const skills = [
-  "Communication",
-  "Cross-cultural management",
-  "Project coordination",
-  "Data analysis",
-  "Customer relations",
-];
-
 export default function ProductPreview() {
   return (
-    <section className="py-24 px-6 bg-gray-50/70">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-14 max-w-xl">
-          <p className="text-xs uppercase font-bold tracking-widest text-[#004aad] mb-3">
-            Product Preview
-          </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-            See it in action
-          </h2>
-        </div>
+    <section className="py-32 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col items-center">
+        
+        <h2 className="text-[2.5rem] md:text-[3.5rem] text-center font-serif text-[#1c1917] mb-16 max-w-2xl leading-tight">
+          A platform that actually <span className="italic text-[#004aad]">understands</span> your context.
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1: Resume Score */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
-              Resume Score
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+          {/* Card 1: Hand-holding Audit */}
+          <div className="bg-[#fdfaf6] border border-[#e7e5e4] rounded-[2.5rem] p-10 flex flex-col h-full shadow-soft transition-transform hover:-translate-y-1">
+            <h3 className="text-2xl font-serif text-[#1c1917] mb-4">The Resume Audit</h3>
+            <p className="text-[#78716c] mb-12 flex-grow text-[1.05rem]">
+              Upload your current CV, and we'll show you exactly how a Korean recruiter sees it. No confusing metrics, just clear action items.
             </p>
-            {/* Score ring */}
-            <div className="flex items-center justify-center mb-6">
-              <div className="relative w-28 h-28">
-                <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
-                  <circle
-                    cx="60"
-                    cy="60"
-                    r="50"
-                    fill="none"
-                    stroke="#e5e7eb"
-                    strokeWidth="10"
-                  />
-                  <circle
-                    cx="60"
-                    cy="60"
-                    r="50"
-                    fill="none"
-                    stroke="#004aad"
-                    strokeWidth="10"
-                    strokeDasharray="314"
-                    strokeDashoffset="69"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-2xl font-extrabold text-gray-900">
-                    78%
-                  </span>
-                  <span className="text-xs text-gray-400 font-medium">Ready</span>
+            
+            {/* Visual element */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#e7e5e4]">
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <p className="text-sm font-medium text-[#78716c] mb-1">Your Alignment Score</p>
+                  <p className="text-4xl font-serif text-[#1c1917]">78<span className="text-lg text-[#a8a29e] ml-1">/ 100</span></p>
+                </div>
+                <div className="w-16 h-16 rounded-full border-4 border-[#e7e5e4] border-t-[#004aad] border-r-[#004aad] rotate-45"></div>
+              </div>
+              <div className="space-y-3">
+                <div className="px-3 py-2 rounded-lg bg-[#fee2e2]/40 text-[#b91c1c] text-sm">
+                  <span className="font-semibold mr-1">Tweak:</span> Rephrase "Led team" to "Project Managed".
+                </div>
+                <div className="px-3 py-2 rounded-lg bg-[#def7ec]/50 text-[#046c4e] text-sm">
+                  <span className="font-semibold mr-1">Great:</span> Excellent use of quantifiable metrics!
                 </div>
               </div>
             </div>
-            <div className="space-y-2">
-              {[
-                { label: "Keyword Match", val: 85 },
-                { label: "Format", val: 70 },
-                { label: "Clarity", val: 78 },
-              ].map((item) => (
-                <div key={item.label}>
-                  <div className="flex justify-between text-xs text-gray-500 mb-1">
-                    <span>{item.label}</span>
-                    <span className="font-semibold text-gray-700">
-                      {item.val}%
-                    </span>
-                  </div>
-                  <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-[#004aad]"
-                      style={{ width: `${item.val}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Card 2: Skill Discovery */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
-              Skill Discovery
+          {/* Card 2: Intimate Job Matching */}
+          <div className="bg-[#1c1917] rounded-[2.5rem] p-10 flex flex-col h-full shadow-soft text-white transition-transform hover:-translate-y-1">
+            <h3 className="text-2xl font-serif mb-4">The Match</h3>
+            <p className="text-[#a8a29e] mb-12 flex-grow text-[1.05rem]">
+              We don't show you roles that legally can't sponsor your visa. We show you the companies excitedly looking for your exact background.
             </p>
-            <p className="text-sm text-gray-500 mb-5">
-              Based on your experience, Acafo found these transferable skills:
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 rounded-full bg-[#e8eef8] text-[#004aad] text-xs font-semibold"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-            <div className="mt-6 pt-5 border-t border-gray-100">
-              <p className="text-xs text-gray-400 font-medium">
-                + 12 more skills detected from your resume
-              </p>
-            </div>
-          </div>
 
-          {/* Card 3: Job Match */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
-              Best Fit Job
-            </p>
-            <div className="flex flex-col gap-4">
+            {/* Visual element */}
+            <div className="space-y-4">
               {[
-                {
-                  role: "Global Business Coordinator",
-                  company: "Lotte Global Logistics",
-                  match: 94,
-                },
-                {
-                  role: "International Sales Manager",
-                  company: "Samsung C&T",
-                  match: 88,
-                },
-                {
-                  role: "Global HR Specialist",
-                  company: "Kakao Corp",
-                  match: 82,
-                },
-              ].map((job) => (
-                <div
-                  key={job.role}
-                  className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100"
-                >
-                  <div className="min-w-0 mr-3">
-                    <p className="text-sm font-semibold text-gray-800 truncate">
-                      {job.role}
-                    </p>
-                    <p className="text-xs text-gray-400 truncate">{job.company}</p>
+                { role: "Global Business Coordinator", co: "Lotte Logistics", match: "94%" },
+                { role: "Overseas Sales Specialist", co: "Samsung C&T", match: "88%" },
+              ].map((j, i) => (
+                <div key={i} className="bg-[#292524] rounded-2xl p-4 border border-[#44403c] flex justify-between items-center">
+                  <div>
+                    <h4 className="font-medium text-white mb-1">{j.role}</h4>
+                    <p className="text-xs text-[#a8a29e]">{j.co}</p>
                   </div>
-                  <span className="flex-shrink-0 text-xs font-bold px-2.5 py-1 rounded-full bg-[#e8eef8] text-[#004aad]">
-                    {job.match}%
-                  </span>
+                  <div className="bg-white text-[#1c1917] px-3 py-1.5 rounded-full text-sm font-bold shadow-sm">
+                    {j.match}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

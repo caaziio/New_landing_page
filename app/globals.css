@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f0f0f;
+  --background: #fdfaf6; /* Warm off-white, very human and inviting */
+  --foreground: #1c1917; /* Dark charcoal instead of pure black */
   --accent: #004aad;
   --accent-light: #e8eef8;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --card: #f9fafb;
+  --muted: #78716c; /* Warm gray */
+  --border: #e7e5e4;
+  --card: #ffffff;
+  --peach: #fef08a; /* Soft highlighter color */
 }
 
 @theme inline {
@@ -19,7 +20,9 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
-  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
 }
 
 * {
@@ -33,7 +36,12 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility for Hinge-like soft shadows */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
 }

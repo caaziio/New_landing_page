@@ -1,68 +1,57 @@
-const steps = [
-  {
-    number: "01",
-    title: "Discover your skills",
-    description:
-      "Extract hidden skills from your life experiences, projects, and work history.",
-  },
-  {
-    number: "02",
-    title: "Build a market-ready resume",
-    description:
-      "Create a Korean-style CV tailored to what employers actually look for.",
-  },
-  {
-    number: "03",
-    title: "Get your resume scored",
-    description:
-      "Receive an alignment score with specific, actionable improvements.",
-  },
-  {
-    number: "04",
-    title: "Access aligned jobs",
-    description:
-      "See roles matched to your actual profile — not just keywords.",
-  },
-];
-
 export default function HowItWorks() {
+  const steps = [
+    {
+      num: "1",
+      title: "Tell us your story",
+      desc: "Forget stiff cover letters. Walk us through your background, experiences, and what makes you unique in a simple, guided discovery flow."
+    },
+    {
+      num: "2",
+      title: "We translate your value",
+      desc: "Our engine maps your experiences into the specific skills and formats that Korean recruiters are actively filtering for."
+    },
+    {
+      num: "3",
+      title: "Audit your readiness",
+      desc: "Get an instant score on your newly formatted resume. See exactly what to tweak to bump your chances from 'maybe' to 'interview'."
+    },
+    {
+      num: "4",
+      title: "Meet your match",
+      desc: "Access job listings that actually align with your audited profile. No more applying to jobs where you never had a chance."
+    }
+  ];
+
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-16 max-w-xl">
-          <p className="text-xs uppercase font-bold tracking-widest text-[#004aad] mb-3">
-            The system
-          </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-            How Acafo works
+    <section id="how-it-works" className="py-24 px-6 bg-white mx-0 lg:mx-4 rounded-none lg:rounded-[3rem] border-y lg:border border-[#e7e5e4]/50 shadow-soft">
+      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-20 items-start">
+        
+        <div className="lg:w-1/3 sticky top-32">
+          <h2 className="text-[2.5rem] md:text-[3.5rem] font-serif text-[#1c1917] leading-tight mb-6">
+            How we <br className="hidden lg:block"/>set you up.
           </h2>
+          <p className="text-lg text-[#78716c] mb-8">
+            A four-step process designed to highlight your strengths in a way companies immediately understand.
+          </p>
+          <div className="hidden lg:block w-24 h-[1px] bg-[#e7e5e4]"></div>
         </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="lg:w-2/3 flex flex-col gap-12">
           {steps.map((step, i) => (
-            <div
-              key={step.number}
-              className="relative flex flex-col gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:border-[#004aad]/30 hover:bg-[#e8eef8]/30 transition-all"
-            >
-              {/* Connector line on desktop */}
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 right-0 w-px h-0 border-t border-dashed border-gray-200 translate-x-1/2" />
-              )}
-
-              <span className="text-3xl font-black text-[#004aad]/15 leading-none">
-                {step.number}
-              </span>
-              <h3 className="text-base font-bold text-gray-900">
-                {step.title}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {step.description}
-              </p>
+            <div key={i} className="flex gap-6 group">
+              <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[#fdfaf6] border border-[#e7e5e4] flex items-center justify-center text-xl font-serif text-[#1c1917] group-hover:bg-[#1c1917] group-hover:text-white transition-colors duration-300">
+                {step.num}
+              </div>
+              <div className="pt-3">
+                <h3 className="text-2xl font-serif text-[#1c1917] mb-3">{step.title}</h3>
+                <p className="text-[1.05rem] text-[#78716c] leading-[1.6] max-w-lg">
+                  {step.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
