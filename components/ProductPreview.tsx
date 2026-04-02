@@ -1,64 +1,50 @@
+import Image from "next/image";
+
 export default function ProductPreview() {
   return (
-    <section className="py-32 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col items-center">
-        
-        <h2 className="text-[2.5rem] md:text-[3.5rem] text-center font-serif text-[#1c1917] mb-16 max-w-2xl leading-tight">
-          A platform that actually <span className="italic text-[#004aad]">understands</span> your context.
-        </h2>
+    <section className="py-24 px-6 bg-light-blue">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <div className="text-center mb-16">
+          <p className="text-[#004aad] font-bold text-sm uppercase tracking-widest mb-4">Under the hood</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-6">Built exactly for the Korean ATS.</h2>
+          <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            See instantly how your profile aligns with top roles at Samsung, Naver, Coupang, and more.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-          {/* Card 1: Hand-holding Audit */}
-          <div className="bg-[#fdfaf6] border border-[#e7e5e4] rounded-[2.5rem] p-10 flex flex-col h-full shadow-soft transition-transform hover:-translate-y-1">
-            <h3 className="text-2xl font-serif text-[#1c1917] mb-4">The Resume Audit</h3>
-            <p className="text-[#78716c] mb-12 flex-grow text-[1.05rem]">
-              Upload your current CV, and we'll show you exactly how a Korean recruiter sees it. No confusing metrics, just clear action items.
-            </p>
+        <div className="w-full max-w-5xl bg-gradient-to-br from-[#0d1e38] via-navy to-[#081324] rounded-[2rem] p-4 md:p-8 shadow-2xl relative overflow-hidden border border-white/5">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2"></div>
+          
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            {/* Visual element */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#e7e5e4]">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <p className="text-sm font-medium text-[#78716c] mb-1">Your Alignment Score</p>
-                  <p className="text-4xl font-serif text-[#1c1917]">78<span className="text-lg text-[#a8a29e] ml-1">/ 100</span></p>
+            {/* Sidebar Mockup */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+              <div className="h-4 w-1/2 bg-white/20 rounded-full mb-4"></div>
+              <div className="h-10 w-full bg-light-blue rounded-xl flex items-center px-4 font-bold text-[#004aad]">Global PM</div>
+              <div className="h-10 w-full bg-white/5 rounded-xl flex items-center px-4 text-white-grey/60">Data Analyst</div>
+              <div className="h-10 w-full bg-white/5 rounded-xl flex items-center px-4 text-white-grey/60">Frontend Dev</div>
+            </div>
+
+            {/* Main Dashboard Mockup */}
+            <div className="col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-6 relative">
+              <div className="flex justify-between items-center mb-4">
+                <div className="w-3/4 h-8 bg-white/20 rounded-md"></div>
+                <div className="w-16 h-16 rounded-full border-[6px] border-blue-500/30 border-r-blue-500 flex items-center justify-center -rotate-45">
+                  <span className="text-white font-bold rotate-45">92%</span>
                 </div>
-                <div className="w-16 h-16 rounded-full border-4 border-[#e7e5e4] border-t-[#004aad] border-r-[#004aad] rotate-45"></div>
               </div>
-              <div className="space-y-3">
-                <div className="px-3 py-2 rounded-lg bg-[#fee2e2]/40 text-[#b91c1c] text-sm">
-                  <span className="font-semibold mr-1">Tweak:</span> Rephrase "Led team" to "Project Managed".
+              <div className="grid grid-cols-2 gap-4">
+                <div className="h-32 bg-white/10 rounded-xl relative overflow-hidden">
+                  <div className="absolute bottom-4 left-4 right-4 h-2 bg-white/20 rounded-full">
+                    <div className="w-3/4 h-full bg-blue-500 rounded-full"></div>
+                  </div>
                 </div>
-                <div className="px-3 py-2 rounded-lg bg-[#def7ec]/50 text-[#046c4e] text-sm">
-                  <span className="font-semibold mr-1">Great:</span> Excellent use of quantifiable metrics!
+                <div className="h-32 bg-white/10 rounded-xl border border-blue-500/50 flex items-center justify-center text-blue-400 font-bold p-4 text-center">
+                  "Keyword match improved by 45%"
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Card 2: Intimate Job Matching */}
-          <div className="bg-[#1c1917] rounded-[2.5rem] p-10 flex flex-col h-full shadow-soft text-white transition-transform hover:-translate-y-1">
-            <h3 className="text-2xl font-serif mb-4">The Match</h3>
-            <p className="text-[#a8a29e] mb-12 flex-grow text-[1.05rem]">
-              We don't show you roles that legally can't sponsor your visa. We show you the companies excitedly looking for your exact background.
-            </p>
-
-            {/* Visual element */}
-            <div className="space-y-4">
-              {[
-                { role: "Global Business Coordinator", co: "Lotte Logistics", match: "94%" },
-                { role: "Overseas Sales Specialist", co: "Samsung C&T", match: "88%" },
-              ].map((j, i) => (
-                <div key={i} className="bg-[#292524] rounded-2xl p-4 border border-[#44403c] flex justify-between items-center">
-                  <div>
-                    <h4 className="font-medium text-white mb-1">{j.role}</h4>
-                    <p className="text-xs text-[#a8a29e]">{j.co}</p>
-                  </div>
-                  <div className="bg-white text-[#1c1917] px-3 py-1.5 rounded-full text-sm font-bold shadow-sm">
-                    {j.match}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

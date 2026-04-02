@@ -1,38 +1,48 @@
 export default function Problem() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <h2 className="text-[2.75rem] md:text-[3.5rem] font-serif leading-[1.1] text-[#1c1917] mb-6">
-          "Why is it so hard to hear back?"
-        </h2>
-        <p className="text-xl text-[#78716c] max-w-2xl mb-16">
-          You send out dozens of applications. Your skills are exactly what they need. But nothing happens. Sound familiar?
-        </p>
+    <section className="py-24 md:py-40 px-6 overflow-hidden bg-[#fafafa]">
+      <div className="max-w-[70rem] mx-auto flex flex-col">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {[
-            {
-              title: "Lost in translation",
-              desc: "It’s not your language skills. It's that your resume doesn't speak the 'Korean corporate' format.",
-              color: "bg-[#fef08a]/30",
-            },
-            {
-              title: "The invisible mismatch",
-              desc: "You’re highlighting what worked back home, but companies here are looking for completely different keywords.",
-              color: "bg-[#e8eef8]",
-            },
-            {
-              title: "The guessing game",
-              desc: "Applying feels like throwing darts blindfolded. You don’t know why you were rejected, so you can't fix it.",
-              color: "bg-[#fee2e2]/50",
-            }
-          ].map((item, i) => (
-            <div key={i} className={`p-8 rounded-[2rem] flex flex-col text-left ${item.color}`}>
-              <h3 className="text-xl font-serif font-medium text-[#1c1917] mb-4">{item.title}</h3>
-              <p className="text-[15px] text-[#57534e] leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+        {/* Top Text (Hinge Style) */}
+        <div className="w-full relative z-20">
+          <h2 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.25rem] font-serif tracking-tight leading-[1.05] text-[#1b1b1b] max-w-4xl">
+            Say goodbye to <span className="opacity-40 italic line-through decoration-1">endless</span><br />
+            <span className="opacity-40 italic line-through decoration-1">rejection.</span>
+          </h2>
         </div>
+
+        {/* Bottom Right Content */}
+        <div className="w-full flex justify-end mt-16 md:mt-24 relative">
+          <div className="max-w-md relative z-10 pl-8 md:pl-12 border-l border-[#1b1b1b]/10">
+            <p className="text-[#444] text-[15px] md:text-[17px] font-light leading-[1.7] mb-10">
+              Acafo is built on the belief that foreign talent shouldn't be filtered out by simple formatting differences. We restructure your global experience into the exact corporate language Korean recruiters trust—so you can stop applying blind, and start interviewing.
+            </p>
+
+            <a href="#how-it-works" className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#004aad] text-white font-bold text-[14px] md:text-[15px] tracking-wide hover:bg-[#003d8f] transition-all hover:shadow-xl hover:-translate-y-0.5 active:scale-95 shadow-lg">
+              Learn our approach
+            </a>
+          </div>
+        </div>
+        {/* Problem Synthesis Quote */}
+        <div className="mt-20 md:mt-24 pt-16 md:pt-20 border-t border-[#1b1b1b]/5 flex flex-col items-center text-center">
+          <blockquote className="max-w-4xl flex flex-col items-center group">
+            {/* Top Quote Icon */}
+            <div className="text-[4.5rem] font-serif text-[#004aad]/25 select-none leading-none -mb-8">
+              “
+            </div>
+            
+            <h4 className="text-[1.5rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif italic text-[#1b1b1b] leading-[1.3] tracking-tight relative px-4">
+              The problem is not your skills. <br className="hidden md:block" />
+              The problem is <span className="text-[#004aad] not-italic font-bold">misalignment.</span>
+            </h4>
+
+            {/* Bottom Quote Icon */}
+            <div className="text-[4.5rem] font-serif text-[#004aad]/25 select-none leading-none mt-2">
+              ”
+            </div>
+          </blockquote>
+        </div>
+
       </div>
     </section>
   );

@@ -1,22 +1,25 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-[#e7e5e4]/50 py-16 px-6 bg-[#fdfaf6]">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-[15px] text-[#a8a29e]">
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-          <span className="font-serif text-2xl text-[#1c1917] font-semibold">acafo.</span>
-          <span className="hidden md:inline-block w-px h-5 bg-[#e7e5e4]"></span>
-          <span>Because your career story matters.</span>
-        </div>
+    <footer className="bg-navy py-16 px-6 border-t border-white/5">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-8 md:flex-row">
         
-        <div className="flex flex-wrap items-center justify-center gap-8 font-medium">
-          <a href="#" className="hover:text-[#1c1917] transition-colors">Privacy</a>
-          <a href="#" className="hover:text-[#1c1917] transition-colors">Terms</a>
-          <a href="#" className="hover:text-[#1c1917] transition-colors">Contact</a>
+        {/* Logo & Copyright */}
+        <div className="flex flex-col items-center md:items-start">
+          <a href="/" className="text-3xl font-bold tracking-tight text-white flex items-center gap-2 mb-2">
+            acafo.
+          </a>
+          <p className="text-light-blue text-sm">
+            © {new Date().getFullYear()} Acafo. All rights reserved.
+          </p>
         </div>
-        
-        <div className="text-sm">
-          © {new Date().getFullYear()} Acafo.
+
+        {/* Legal Links */}
+        <div className="flex items-center gap-6 text-sm text-light-blue font-medium">
+          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" className="hover:text-white transition-colors">Contact</a>
         </div>
+
       </div>
     </footer>
   );
