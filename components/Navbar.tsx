@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-[#004aad] flex items-center justify-center text-xs">✨</div>
+          <div className="w-6 h-6 rounded-md bg-brand-blue flex items-center justify-center text-xs">✨</div>
           acafo.
         </a>
 

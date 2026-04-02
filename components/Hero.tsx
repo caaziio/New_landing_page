@@ -25,8 +25,8 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <a href="#" className="w-full sm:w-auto px-8 py-4 rounded-full bg-light-blue text-navy font-semibold text-lg hover:bg-white transition-all shadow-xl hover:-translate-y-1">
-              Start Your Resume Audit
+            <a href="#" className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gradient text-white font-bold text-[16px] hover:shadow-2xl transition-all shadow-xl hover:-translate-y-1">
+              Start your resume audit
             </a>
             <a href="#how-it-works" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-transparent text-white-grey font-semibold text-lg hover:bg-white-grey/10 transition-colors">
               See how it works

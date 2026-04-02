@@ -4,8 +4,8 @@ import Trust from "@/components/Trust";
 import Problem from "@/components/Problem";
 import Insight from "@/components/Insight";
 import HowItWorks from "@/components/HowItWorks";
-import ProductPreview from "@/components/ProductPreview";
 import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <Trust />
       <Problem />
-      <Insight />
       <HowItWorks />
-      <ProductPreview />
+      <Testimonials />
       <Services />
       <FinalCTA />
+      <Insight />
       <Footer />
     </main>
   );
